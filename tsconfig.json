@@ -1,3 +1,18 @@
 {
-  "extends": "@react-native/typescript-config/tsconfig.json"
+  "extends": "@react-native/typescript-config/tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/utils":["./src/utils"],
+      "@/components":["./src/components"],
+      "@/constants":["./src/constants"],
+      "@/navigators":["./src/navigators"],
+      "@/screens":["./src/screens"],
+      "@/theme":["./src/theme"],
+      "@/icons":["./src/recourse/icons"],
+      "@/component":["src/components"],
+    }
+  }
+
+ 
 }
