@@ -19,6 +19,7 @@ import {
 } from 'react-native';
 import { initialWindowMetrics, SafeAreaProvider } from 'react-native-safe-area-context';
 import { AppNavigator } from '@/navigators';
+import { colors } from '@/theme';
 
 
 
@@ -28,6 +29,10 @@ import { AppNavigator } from '@/navigators';
 function App(): React.JSX.Element {
   return (
     <SafeAreaProvider initialMetrics={initialWindowMetrics}>
+      <StatusBar 
+        barStyle={'dark-content'}
+        backgroundColor={colors.palette.white}
+        />
       <NavigationContainer>
         <AppNavigator/>
       </NavigationContainer>

@@ -1,4 +1,4 @@
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { createNativeStackNavigator, NativeStackNavigationOptions } from "@react-navigation/native-stack";
 import { TabNavigator } from "./tab-navigator";
 import { AuthNavigator } from "./auth-navigator";
 import * as Screens from "@/screens";
@@ -12,16 +12,36 @@ export type RootStackParamList = {
 
 const RootStack = createNativeStackNavigator<RootStackParamList>();
 
+type RootStackScreenOptionsType = {
+    [key in keyof RootStackParamList]: NativeStackNavigationOptions;
+}
+
+const RootStackScreenOptions : RootStackScreenOptionsType ={
+    Auth:{},
+    Initial:{},
+    Search:{
+        headerShown: true,
+        headerTitleAlign:'center',
+        title: 'Search recipes',
+        headerShadowVisible:false,
+    },
+    Tab:{},
+}
+
 export const AppNavigator = ()=> {
 return(
         <RootStack.Navigator 
            screenOptions={{
             headerShown:false,
+            animation:'fade_from_bottom',
            }}>
-            <RootStack.Screen name="Initial" component={Screens.InitialScreen}/>
-            <RootStack.Screen name="Auth" component={AuthNavigator}/>
-            <RootStack.Screen name="Tab" component={TabNavigator}/>
-            <RootStack.Screen name="Search" component={Screens.SearchScreen}/>
+            <RootStack.Screen options={{}} name="Initial" component={Screens.InitialScreen}/>
+            <RootStack.Screen options={{}} name="Auth" component={AuthNavigator}/>
+            <RootStack.Screen options={{}} name="Tab" component={TabNavigator}/>
+            <RootStack.Screen 
+                options={RootStackScreenOptions.Search} 
+                name="Search" 
+                component={Screens.SearchScreen}/>
             
         </RootStack.Navigator>
   

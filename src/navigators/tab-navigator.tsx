@@ -6,7 +6,7 @@ import { BellIcon, BookmarkIcon, HomeIcon, UserIcon } from "@/icons";
 import { colors } from "@/theme";
 
 
-type BottomTabParamList = {
+export type BottomTabParamList = {
     Home:undefined;
     Saved:undefined;
     User:undefined;

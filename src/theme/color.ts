@@ -30,7 +30,9 @@ export const palette = {
     tabIconFocused: palette.primary40,
     screenBackground : palette.white,
     inputBorder: palette.gray400,
+    categoryCarBackground: palette.gray400,
     text: palette.black,
     textSecondary: palette.gray300,
     palette,
+    starColor: palette.rating
   };
