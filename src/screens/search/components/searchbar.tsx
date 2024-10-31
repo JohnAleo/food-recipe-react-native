@@ -6,7 +6,7 @@ import  IonIcon  from 'react-native-vector-icons/Ionicons'
 
 export const SearchBar = () => {
   return (
-    <ScreenView>
+    // <ScreenView>
         <View style={$searchRow}>
             <Pressable style={$searchBar}>
             <Icon name="search1" size={26} color={colors.inputBorder} />
@@ -25,7 +25,7 @@ export const SearchBar = () => {
                     color={colors.inputBorder}/>
              </Pressable>
         </View>
-    </ScreenView>
+    // </ScreenView>
   )
 }
 
@@ -38,7 +38,7 @@ const $searchRow : ViewStyle = {
   
   const $searchBar : ViewStyle ={
     flex: 1,
-    gap: spacing.xs,
+    // gap: spacing.xs,
     height: 40,
     flexDirection:'row',
     alignItems:'center',

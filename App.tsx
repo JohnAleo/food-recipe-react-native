@@ -1,9 +1,4 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
+
 
 import { NavigationContainer } from '@react-navigation/native';
 import React from 'react';
@@ -20,6 +15,7 @@ import {
 import { initialWindowMetrics, SafeAreaProvider } from 'react-native-safe-area-context';
 import { AppNavigator } from '@/navigators';
 import { colors } from '@/theme';
+import { BottomSheetModalProvider } from '@gorhom/bottom-sheet';
 
 
 
@@ -33,9 +29,11 @@ function App(): React.JSX.Element {
         barStyle={'dark-content'}
         backgroundColor={colors.palette.white}
         />
-      <NavigationContainer>
-        <AppNavigator/>
-      </NavigationContainer>
+        <BottomSheetModalProvider>
+          <NavigationContainer>
+            <AppNavigator/>
+          </NavigationContainer>
+      </BottomSheetModalProvider>
     </SafeAreaProvider>
   );
 }

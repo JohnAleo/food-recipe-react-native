@@ -13,7 +13,7 @@ const data = [
     title: 'Spaghetti Carbonara',
     rating: 4.5,
     image:
-      'https://www.inspiredtaste.net/wp-content/uploads/2019/03/Spaghetti-with-Meat-Sauce-Recipe-1-1200.jpg',
+      'https://avatars.mds.yandex.net/i?id=641fa9f0b98ed4d564d1f00f8cb557390948d0c6-10468051-images-thumbs&n=13',
     author: 'Shakhzod',
   },
   {
@@ -21,7 +21,7 @@ const data = [
     title: 'Spaghetti Carbonara',
     rating: 4.5,
     image:
-      'https://www.inspiredtaste.net/wp-content/uploads/2019/03/Spaghetti-with-Meat-Sauce-Recipe-1-1200.jpg',
+      'https://avatars.mds.yandex.net/i?id=641fa9f0b98ed4d564d1f00f8cb557390948d0c6-10468051-images-thumbs&n=13',
     author: 'Shakhzod',
   },
   {
@@ -29,7 +29,7 @@ const data = [
     title: 'Spaghetti Carbonara',
     rating: 4.5,
     image:
-      'https://www.inspiredtaste.net/wp-content/uploads/2019/03/Spaghetti-with-Meat-Sauce-Recipe-1-1200.jpg',
+      'https://avatars.mds.yandex.net/i?id=641fa9f0b98ed4d564d1f00f8cb557390948d0c6-10468051-images-thumbs&n=13g',
     author: 'Shakhzod',
   },
   {
@@ -37,7 +37,7 @@ const data = [
     title: 'Spaghetti Carbonara',
     rating: 4.5,
     image:
-      'https://www.inspiredtaste.net/wp-content/uploads/2019/03/Spaghetti-with-Meat-Sauce-Recipe-1-1200.jpg',
+      'https://avatars.mds.yandex.net/i?id=641fa9f0b98ed4d564d1f00f8cb557390948d0c6-10468051-images-thumbs&n=13',
     author: 'Shakhzod',
   },
 ];
@@ -50,14 +50,15 @@ export const SearchScreen = ({
            <SearchBar/>
            <Text 
               fontWeight='medium' 
-              size='md'>
+              size='md'
+              style={$title}>
                 Recent Search
            </Text>
            <FlatList
             data={data}
             numColumns={2}
             keyExtractor={item => item.toString()}
-            renderItem={({item}) => <SearchItemCard item={item} id={''} title={''} rate={''} author={''}/>} 
+            renderItem={({item}) => <SearchItemCard item={item} />} 
            />
     </ScreenView>
   )
@@ -65,7 +66,7 @@ export const SearchScreen = ({
 
 const $title : TextStyle = {
   marginVertical : spacing.sm,
-paddingHorizontal: spacing.sm,
+paddingHorizontal: spacing.xs, 
 }
 
 const $container : ViewStyle ={
